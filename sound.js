@@ -1,4 +1,4 @@
-// var parent = document.getElementById("parent");
+
 var firstSong = document.getElementById("first");
 var secondSong = document.getElementById("second");
 var thirdSong = document.getElementById("third");
@@ -21,18 +21,14 @@ songes[3] = "musics/Imagine Dragons - Believer (Lyrics) (320 kbps).mp3";
 var audio = document.getElementsByTagName("audio")[0];
         console.dir(audio);
 
-        // عشان يلحق يقرا القيمة بتاعت الاغنية بعد ما الاسكريبت يكون حمل 
+        
         window.addEventListener("load",function(){
             document.getElementById("rangeAudio").max = audio.duration;
            console.log("Start: " + audio.buffered.start(0)+ " End: " + audio.buffered.end(0));
         })
         function changeAudio(rangeAudio){
             audio.currentTime = rangeAudio.valueAsNumber;
-            //  rangeAudio.max = audio.duration;
-            //  rangeAudio.min = audio.buffered.start(0);
-            //  rangeAudio.max = audio.buffered.end(0);
-            //  rangeAudio.value = 0;
-            //  rangeAudio.min = audio.duration;
+
         }
         function update(){
             var nt= audio.currentTime ;
@@ -45,12 +41,10 @@ var audio = document.getElementsByTagName("audio")[0];
 
         function muteAudio(){
             audio.muted = !audio.muted;
-            // v.value = audio.value;
 
         }
         function changeVolume(volumeRange){
             audio.volume = volumeRange.valueAsNumber;
-            // volumeRange.max = audio.volume;
 
         }
         function playAudio(){
@@ -83,34 +77,4 @@ fourthSong.addEventListener('click', () => {
     audio.src = songes[3]
 })
 
-// var pause = document.getElementById("pause");
-// pause.addEventListener("click", () => {
-//     var parent = document.getElementById("parent");
-//     parent.pause();
-// });
 
-// var play = document.getElementById("play");
-// play.addEventListener("click", () => {
-//     var parent = document.getElementById("parent");
-//     parent.play();
-// });
-
-// var stop = document.getElementById("stop");
-// stop.addEventListener("click", () => {
-//     var parent = document.getElementById("parent");
-//     parent.load();
-// });
-
-// var volume = document.getElementById("sound");
-// volume.addEventListener("change", () => {
-//     var parent = document.getElementById("parent");
-//     console.log(volume.value);
-//     parent.volume = volume.value /100;
-    
-// });
-
-// var mute = document.getElementById("mute");
-// mute.addEventListener("click", () => {
-//     var parent = document.getElementById("parent");
-//     parent.muted = !parent.muted;
-// });
